@@ -1,0 +1,33 @@
+/* HOME PAGE */
+#welcome-container {
+    width: 90%;
+    display: flex;
+    flex-flow: row  wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#welcome-text {
+    /* background-color: rosybrown; */
+    width: min(800px, 80%);
+}
+
+#welcome-title, #welcome-subtitle {
+    text-align: center;
+}
+
+#welcome-subtitle {
+    margin-bottom: 2rem;
+}
+
+#home-image {
+    width: 40%;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1559px) {
+    #home-image {
+        width: min(800px, 80%);
+    }
+}

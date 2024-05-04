@@ -11,7 +11,7 @@
 
 /* GENERAL STYLE */
 html {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: "Teachers", sans-serif;
     background-color: #FFF2D7;
 } 
@@ -70,4 +70,25 @@ body {
 
 #header ul li:hover::before {
     top: 90%;
+}
+
+/* FOOTER */
+#footer {
+    background-color: #D8AE7E;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 15vh;
+}
+
+/* MAIN */
+#main {
+    padding: 2rem 0;
+    flex: 1;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
