@@ -1,0 +1,16 @@
+/* IMPORTING THE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+    outline: none;
+}
+
+/* GENERAL STYLE */
+html {
+    font-size: 1.5rem;
+    font-family: "Teachers", sans-serif;
+}
