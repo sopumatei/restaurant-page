@@ -31,4 +31,17 @@ const createHeader = () => {
     return header;
 }
 
+const createFooter = () => {
+    // Creating the footer
+    const footer = document.createElement('div');
+    footer.id = 'footer';
+
+    const footerText = document.createElement('p');
+    footerText.textContent = 'All rights reserved © Sopu Matei';
+    footer.appendChild(footerText);
+
+    return footer;
+}
+
 document.body.appendChild(createHeader());
+document.body.appendChild(createFooter());

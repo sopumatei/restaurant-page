@@ -13,4 +13,61 @@
 html {
     font-size: 1.5rem;
     font-family: "Teachers", sans-serif;
+    background-color: #FFF2D7;
+} 
+
+body {
+    min-height: 100vh;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+/* HEADER */
+#header {
+    padding:1.5vh 0;
+    color: #000;
+    background-color: #FFE0B5;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#title {
+    letter-spacing: 1.2px;
+}
+
+#header ul {
+    list-style: none;
+
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 2rem;
+}
+
+#header ul li {
+    font-size: 1.2rem;
+    position: relative;
+    padding: 0.25rem 0;
+}
+
+#header ul li:hover {
+    cursor: pointer;
+}
+
+#header ul li::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #D8AE7E;
+    transition: top 0.2s ease-in-out;
+}
+
+#header ul li:hover::before {
+    top: 90%;
 }
