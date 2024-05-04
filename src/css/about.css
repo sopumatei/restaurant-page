@@ -1,0 +1,30 @@
+/* ABOUT PAGE */
+#about-container {
+    width: 90%;
+    display: flex;
+    flex-flow: column  nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#about-title, #about-description {
+    text-align: center;
+}
+
+#about-description {
+    width: min(800px, 80%);
+    margin-top: -1rem;
+}
+
+#about-image {
+    width: 100%;
+    height: 15vh;
+}
+
+/* MEDIA QUERIES */
+/* @media screen and (max-width: 1559px) {
+    #home-image {
+        width: min(800px, 80%);
+    }
+} */

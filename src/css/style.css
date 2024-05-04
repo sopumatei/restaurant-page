@@ -39,6 +39,10 @@ body {
     letter-spacing: 1.2px;
 }
 
+#title:hover {
+    cursor: pointer;
+}
+
 #header ul {
     list-style: none;
 
@@ -72,6 +76,10 @@ body {
     top: 90%;
 }
 
+#header ul li.active::before {
+    top: 90%;
+}
+
 /* FOOTER */
 #footer {
     background-color: #D8AE7E;
@@ -91,4 +99,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    transition: transform 0.3s ease-out;
 }
