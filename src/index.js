@@ -4,6 +4,7 @@ import './css/home.css'
 import { loadAbout } from './Pages/About.js'
 import { loadHome } from './Pages/Home.js'
 import { loadMenu } from './Pages/Menu.js'
+import { loadContact } from './Pages/Contact.js'
 
 const createHeader = () => {
     // Creating the header
@@ -86,6 +87,25 @@ const createHeader = () => {
     const contactBtn = document.createElement('li');
     contactBtn.id = 'contact-btn';
     contactBtn.textContent = 'Contact';
+    contactBtn.addEventListener('click', () => {
+        if(contactBtn.classList != 'active') {
+            contactBtn.classList.add('active');
+
+            document.getElementById('menu-btn').classList = '';
+            document.getElementById('title').classList = '';
+            document.getElementById('about-btn').classList = '';
+
+            const main = document.getElementById('main');
+            main.style.transform = 'scale(0)';
+
+            setTimeout(() => {
+                main.innerHTML = '';
+                main.appendChild(loadContact());
+                main.style.transform = 'scale(1)';
+                main.style.alignItems = 'center';
+            }, 300)
+        }
+    });
 
     headerButtons.appendChild(menuBtn);
     headerButtons.appendChild(aboutBtn);

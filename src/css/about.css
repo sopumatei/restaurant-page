@@ -1,6 +1,6 @@
 /* ABOUT PAGE */
 #about-container {
-    width: 90%;
+    width: 80%;
     display: flex;
     flex-flow: column  nowrap;
     justify-content: center;

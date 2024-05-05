@@ -1,5 +1,5 @@
 #menu-container {
-    width: min(90vw, 1200px);;
+    width: min(90vw, 1200px);
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
