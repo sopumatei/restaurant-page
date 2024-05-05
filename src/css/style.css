@@ -85,10 +85,28 @@ body {
     background-color: #FFE0B5;
     
     display: flex;
-    justify-content: center;
+    flex-flow: row nowrap;
+    justify-content: space-around;
     align-items: center;
     
     height: 15vh;
+}
+
+#footer ul {
+    list-style: none;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.25rem;
+}
+
+#footer ul li {
+    transition: opacity 0.2s ease-in-out;
+}
+
+#footer ul li:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 /* MAIN */

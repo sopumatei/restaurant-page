@@ -120,10 +120,110 @@ const createFooter = () => {
     const footer = document.createElement('div');
     footer.id = 'footer';
 
+    // Creating the footer buttons
+    const footerButtons = document.createElement('ul');
+
+    const homeBtn = document.createElement('li');
+    homeBtn.textContent = 'Home';
+    homeBtn.addEventListener('click', () => {
+        if(document.getElementById('title').classList != 'activeTitle') {
+            document.getElementById('title').classList.add('activeTitle');
+
+            document.getElementById('menu-btn').classList = '';
+            document.getElementById('about-btn').classList = '';
+            document.getElementById('contact-btn').classList = '';
+            const main = document.getElementById('main');
+            main.style.transform = 'scale(0)';
+
+            setTimeout(() => {
+                main.innerHTML = '';
+                main.appendChild(loadHome());
+                main.style.transform = 'scale(1)';
+                main.style.alignItems = 'center';
+            }, 300)
+        }
+    });
+    footerButtons.appendChild(homeBtn);
+
+    const menuBtn = document.createElement('li');
+    menuBtn.textContent = 'Menu';
+    menuBtn.addEventListener('click', () => {
+        if(document.getElementById('menu-btn').classList != 'active') {
+            document.getElementById('menu-btn').classList.add('active');
+
+            document.getElementById('about-btn').classList = '';
+            document.getElementById('title').classList = '';
+            document.getElementById('contact-btn').classList = '';
+
+            const main = document.getElementById('main');
+            main.style.transform = 'scale(0)';
+
+            setTimeout(() => {
+                main.innerHTML = '';
+                main.appendChild(loadMenu());
+                main.style.transform = 'scale(1)';
+                main.style.alignItems = 'flex-start';
+            }, 300)
+        }
+    });
+    footerButtons.appendChild(menuBtn);
+
+    const aboutBtn = document.createElement('li');
+    aboutBtn.textContent = 'About';
+    aboutBtn.addEventListener('click', () => {
+        if(document.getElementById('about-btn').classList != 'active') {
+            document.getElementById('about-btn').classList.add('active');
+
+            document.getElementById('menu-btn').classList = '';
+            document.getElementById('title').classList = '';
+            document.getElementById('contact-btn').classList = '';
+
+            const main = document.getElementById('main');
+            main.style.transform = 'scale(0)';
+
+            setTimeout(() => {
+                main.innerHTML = '';
+                main.appendChild(loadAbout());
+                main.style.transform = 'scale(1)';
+                main.style.alignItems = 'flex-start';
+            }, 300)
+        }
+    });
+    footerButtons.appendChild(aboutBtn);
+
+    const contactBtn = document.createElement('li');
+    contactBtn.textContent = 'Contact';
+    contactBtn.addEventListener('click', () => {
+        if(document.getElementById('contact-btn').classList != 'active') {
+            document.getElementById('contact-btn').classList.add('active');
+
+            document.getElementById('menu-btn').classList = '';
+            document.getElementById('title').classList = '';
+            document.getElementById('about-btn').classList = '';
+
+            const main = document.getElementById('main');
+            main.style.transform = 'scale(0)';
+
+            setTimeout(() => {
+                main.innerHTML = '';
+                main.appendChild(loadContact());
+                main.style.transform = 'scale(1)';
+                main.style.alignItems = 'center';
+            }, 300)
+        }
+    });
+    footerButtons.appendChild(contactBtn);
+    footer.appendChild(footerButtons);
+
     // Creating the footer text
     const footerText = document.createElement('p');
-    footerText.textContent = 'All rights reserved © Sopu Matei';
+    footerText.innerHTML = 'Created by <a href="https://github.com/sopumatei" target="_blank">Sopu Matei</a>';
     footer.appendChild(footerText);
+
+    // Creating the rights text
+    const rightsText = document.createElement('p');
+    rightsText.innerHTML = 'Website inspired from <a href="https://www.vecchiaroma.ro" target="_blank">www.vecchiaroma.ro</a>';
+    footer.appendChild(rightsText);
 
     return footer;
 }
