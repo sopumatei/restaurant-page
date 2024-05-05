@@ -3,6 +3,7 @@ import './css/home.css'
 
 import { loadAbout } from './Pages/About.js'
 import { loadHome } from './Pages/Home.js'
+import { loadMenu } from './Pages/Menu.js'
 
 const createHeader = () => {
     // Creating the header
@@ -39,6 +40,25 @@ const createHeader = () => {
     const menuBtn = document.createElement('li');
     menuBtn.id = 'menu-btn';
     menuBtn.textContent = 'Menu';
+    menuBtn.addEventListener('click', () => {
+        if(menuBtn.classList != 'active') {
+            menuBtn.classList.add('active');
+
+            document.getElementById('about-btn').classList = '';
+            document.getElementById('title').classList = '';
+            document.getElementById('contact-btn').classList = '';
+
+            const main = document.getElementById('main');
+            main.style.transform = 'scale(0)';
+
+            setTimeout(() => {
+                main.innerHTML = '';
+                main.appendChild(loadMenu());
+                main.style.transform = 'scale(1)';
+                main.style.alignItems = 'flex-start';
+            }, 300)
+        }
+    });
 
     const aboutBtn = document.createElement('li');
     aboutBtn.id = 'about-btn';
